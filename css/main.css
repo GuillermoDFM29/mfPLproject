@@ -13,7 +13,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
 }
 html {
     font-size: 62.5%;
@@ -207,6 +206,7 @@ header img {
     justify-content: center;
     height: 400px;
     background-image: url("/assets/images/bitcoinbaby.jpg");
+    background-size: cover;
 }
 .comodin-section p {
     text-align: center;
@@ -217,6 +217,8 @@ header img {
 /*Plan section*/
 
 .plan-section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 .plan-section > h1 {
@@ -232,25 +234,79 @@ header img {
     margin: 0 12px 50px;
 }
 .plan-card {
+    position: relative;
     display: flex;
+    align-self: center;
     flex-direction: column;
     align-items: center;
     width: 190px;
     height: 250px;
+    margin-bottom: 65px;
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
     border-radius: 8px;
 }
 .plan-card .recomended, .saving-msg{
     font-size: 0.9rem;
 }
+.recomended {
+    position: absolute;
+    top: -10px;
+    padding: 8px;
+    font-family: 'inter',sans-serif;
+    font-weight: 700;
+    color: var(--just-white);
+    border-radius: 8px;
+    background-color: var(--bitcoin-color);
+}
+.plan-card .pay {
+    padding-top: 35px;
+}
 .plan-card img {
     width: 80px;
     height: 60px;
+    padding-top: 10px;
 }
-.plan-card div {
+.saving-msg {
+    padding: 12px;
+    font-family: 'inter', sans-serif;
+}
+.plan-card--button {
+    display: flex;
+    border: 2px solid #F7931A;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.plan-card--button div {
+    padding: 12px 16px;
     display: flex;
 }
-.plan-card div img {
+.plan-card--button p {
+    font-weight: 700;
+}
+.plan-card--button img {
     width: 24px;
     height: 24px;
+    padding: 5px;
+}
+
+
+/*footer*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0 40px;
+    background-color: var(--bitcoin-color);
+}
+.footer-contact {
+    color: var(--just-white);
+}
+.footer-contact p {
+    padding-top: 10px;
+    font-weight: 500;
+}
+footer img {
+    width: 65px;
+    height: 50px;
 }
